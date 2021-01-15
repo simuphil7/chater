@@ -1,0 +1,270 @@
+body {
+  background-color: snow;
+}
+
+.App {
+  text-align: center;
+  max-width: 728px;
+  margin: 0 auto;
+}
+
+.App header {
+  background: linear-gradient(70deg, #053b79, #058679);
+
+  height: 10vh;
+  min-height: 50px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  max-width: 728px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: larger;
+}
+.App header p {
+  font-size: xx-large;
+  margin-top: 5px;
+  color: snow;
+}
+.App header button {
+  padding: 7px;
+  border-radius: 5px;
+}
+.App main p {
+  margin-top: 0px;
+}
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  background-size: contain;
+  background: linear-gradient(70deg, #3a4077, #1dddca);
+}
+
+main {
+  padding: 10px;
+  height: 80vh;
+  margin: 10vh 0 10vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(70deg, #3a4077, #1dddca);
+}
+
+main::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+main::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+form {
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  background-color: #0e1316;
+  width: 100%;
+  max-width: 728px;
+  display: flex;
+  font-size: 1.5rem;
+}
+
+form button {
+  width: 20%;
+  background-color: #0e1316;
+  color: #fbe623;
+  border-color: #fbe623;
+  border: 2px solid;
+}
+
+input {
+  line-height: 1.5;
+  width: 100%;
+  font-size: 1.5rem;
+  background: #0e1316;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0 10px;
+}
+
+button {
+  background-color: #060b0c; /* Green */
+  border: none;
+  color: snow;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.Coral button {
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+  border: 5px solid #fff;
+  background: transparent;
+  transition: all 1s ease;
+}
+.Coral button span {
+  position: absolute;
+  content: "";
+  top: 1.75em;
+  left: 50%;
+  width: 20em;
+  height: 20em;
+  margin-left: -10em;
+  border-radius: 42.5%;
+  transform-origin: 50% 50%;
+  transition: all 1s ease, top 1.5s ease;
+}
+.Coral button .Coralwave1 {
+  background: #ffb733;
+  animation: smallwave 3s infinite linear;
+}
+.Coral button .Coralwave2 {
+  background: #f97890;
+  animation: smallwave 4s infinite linear;
+}
+.Coral button .Coralwave3 {
+  background: #4ab3e1;
+  animation: smallwave 5s infinite linear;
+}
+.Coral button:hover {
+  transition: all 1s ease;
+}
+.Coral button:hover span {
+  top: 0.5em;
+  transition: all 1s ease, top 1.5s ease;
+}
+@keyframes smallwave {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: rotate(180deg) scale(0.95);
+    opacity: 0.1;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+    opacity: 0.8;
+  }
+}
+ul,
+li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  max-width: 500px;
+  margin-bottom: 12px;
+  line-height: 24px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.send {
+  background-color: #4855b4;
+  color: snow;
+  border: none;
+}
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: white;
+  background: #0366ad;
+  align-self: flex-end;
+}
+.received p {
+  background: #e5e5ea;
+  color: black;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 2px 5px;
+}
+
+.sign-out {
+  display: inline-end;
+  text-align: center;
+  background-color: #03948d;
+  color: snow;
+  font-weight: bold;
+  border-radius: 1em;
+  position: relative;
+  min-width: fit-content;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.sign-out:hover {
+  text-transform: line-through;
+  background-color: #a50b0b;
+}
+
+.App footer {
+  background: linear-gradient(70deg, #053b79, #058679);
+  height: 10vh;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  color: snow;
+  font-size: medium;
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    padding: 10px;
+    height: 80vh;
+    margin: 10vh 0 10vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    background: linear-gradient(70deg, #3a4077, #1dddca);
+  }
+  .sign-out {
+    margin-right: 0px;
+    font-size: 1.3rem;
+    padding: 4px 0px 0 0;
+  }
+  .App header p {
+    font-size: xx-large;
+    margin-top: 8px;
+  }
+  .send {
+    display: none;
+  }
+}
